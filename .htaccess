@@ -4,7 +4,8 @@ RewriteRule ^([^\.]+)$ $1.html [NC,L]
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
+AuthName "Private Folder"
 AuthUserFile /home/colin500/.htpasswd
 AuthType Basic
-require valid-user 
-order deny,allow
+
+Require valid-user 
