@@ -11,3 +11,4 @@ AuthType Basic
 require valid-user 
 order deny,allow
 
+AddType applicationx-httpd-http .private
