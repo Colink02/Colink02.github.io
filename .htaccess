@@ -4,11 +4,7 @@ RewriteRule ^([^\.]+)$ $1.html [NC,L]
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
-AuthUserFile colin500github.io/.htpasswd
-AuthGroupFile /dev/null
-AuthName "Please enter your ID and password"
+AuthUserFile /home/colin500/.htpasswd
 AuthType Basic
 require valid-user 
 order deny,allow
-
-AddType applicationx-httpd-http .private
