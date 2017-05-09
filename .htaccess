@@ -1,11 +1,4 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
-<Files ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-AuthName "/home/colin500/"
-AuthUserFile /home/colin500/.htpasswd
-AuthType Basic
 
-Require valid-user 
