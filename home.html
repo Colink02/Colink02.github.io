@@ -2,9 +2,24 @@
 <html>
   <head>
     <link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-  </head>
+  </head> 
+  <!--NOT READY FOR IMPLEMENT YET!
   <script>
+   
+      $(document).ready(function() {
+  $("#cf7_controls").on('click', 'span', function() {
+    $("#cf7 img").removeClass("opaque");
+
+    var newImage = $(this).index();
+
+    $("#cf7 img").eq(newImage).addClass("opaque");
+
+    $("#cf7_controls span").removeClass("selected");
+    $(this).addClass("selected");
+  });
+});
   </script>
+-->
   <style>
     body {
     background-color: #42a1f4
@@ -27,11 +42,55 @@
      color: #6542f4;
      border: 2px solid #4CAF50;
     }
+    p#cf7_controls {
+  text-align:center;
+}
+#cf7_controls span {
+  padding-right:2em;
+  cursor:pointer;
+}
+#cf7 {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto 10px;
+}
+#cf7 img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity:0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+#cf7 img.opaque {
+  opacity:1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
+}
    </style>
   <body>
     <a style="text-decoration:none;" href = '/home'>Home</a>
     <a style="text-decoration:none;" href = '/about'>About</a>
     <a style="text-decoration:none;" href = '/index'>Index</a>
     <div></div>
+    <!--Code for Photos DO NOT IMPLEMENT YET NOT READY
+    <div id="cf7" class="shadow">
+  <img class='opaque' src="/images/Cirques.jpg" />
+  <img src="/images/Clown%20Fish.jpg;" />
+  <img src="/images/Stones.jpg;" />
+  <img src="/images/Summit.jpg;" />
+</div>
+<p id="cf7_controls">
+  <span class="selected">1</span>
+  <span>2</span>
+  <span>3</span>
+  <span>4</span>
+</p>
+-->
   </body>
 </html>
