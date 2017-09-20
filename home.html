@@ -24,12 +24,12 @@
     min-height: 100%
 }
     body {
+    }
+    .background {
+    filter: blur(3px);
     background-image: url(photos/My Logo.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    }
-    .content:before {
-    filter: blur(3px);
     }
     a:link {
     color: darkseablue;
@@ -74,6 +74,7 @@
       }
    </style>
   <body>
+    <div class='background'>
 <div id='header'>
 <div class="topbar">
 <canvas class="topbar" id="myCanvas" style="none;">This is not supported</canvas>
@@ -113,5 +114,6 @@
     </section>
     </div>
       <p></p>
+  </div>
   </body>
 </html>
