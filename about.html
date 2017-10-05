@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+      <link rel="icon" type="image/png"
+     href="photos/My%20Logo(Watermark_version).png" />
+  </head> 
+    <title>Home</title>
+  <script>
+  </script>
+  <style>
+      
+    .space { margin-top: 25px; }
+    .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+  .background {
+    <!--filter: blur(3px);-->
+    background-image: url("photos/My%20Logo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    }
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+  <body>
+    <div class='background'>
+<div id='header'>
+<div class="topbar">
+<canvas class="topbar" id="myCanvas" style="none;">This is not supported</canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.canvas.width = window.innerWidth;
+    ctx.fillStyle = "Darkseagreen";
+    ctx.fillRect(0,0,2000,75);
+    ctx.closePath();
+</script>
+      </div>
+      <div class="top">
+    <a style="text-decoration:none;" href = '/home'>Home</a>
+    <a style="text-decoration:none;" href = '/about'>About</a>
+    <a style="text-decoration:none;" href = '/Blog'>Blog</a>
+    <a style="text-decoration:none;" href = '/files'>Files</a>
+    </div>
+</div>
