@@ -1,2 +1,4 @@
 User-Agent: *
 Disallow: 
+
+Sitemap: http://colin500.github.io/bot_files/sitemap.xml
