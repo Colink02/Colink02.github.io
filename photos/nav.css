@@ -1,0 +1,64 @@
+@blur: 10px;
+
+body {
+  background-image: url(photos/snow.gif;
+  background-size: cover;
+  padding-top: 70px;
+}
+
+.blur(@blur){
+  -webkit-filter: blur(@blur);
+  -moz-filter: blur(@blur);
+  -o-filter: blur(@blur);
+  -ms-filter: blur(@blur);
+}
+
+.blurry .blurrer {   
+  height: 50px + @blur;
+  top: -@blur;
+  left: -@blur;
+  right: -@blur;
+  position: absolute;
+  overflow: hidden;
+
+  .blur(@blur);
+  z-index: -500;
+
+  background-image: url(photos/snow.gif);
+  background-size: cover;
+}
+
+.blurry {
+  background: none;
+  color: white;
+  border: none;
+
+  .navbar-brand {
+    color: white;
+    font-weight: 600;
+    text-shadow: none;
+
+    &:hover {
+      color: #516FC3;
+    }
+  }
+
+  .navbar-nav>.open>a, 
+  .navbar-nav>.active>a {
+    color: #8B6B45;
+
+    &:hover {
+      color: #F17B16;
+    }
+  }
+
+  .navbar-nav>li>a {
+    color: #F4AD33;
+    font-weight: 500;
+    text-shadow: none;
+
+    &:hover {
+      color: #F17B16;
+    }
+  }
+}
