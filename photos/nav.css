@@ -1,7 +1,7 @@
 @blur: 10px;
 
 body {
-  background-image: url(photos/snow.gif;
+  background-image: url(snow.gif);
   background-size: cover;
   padding-top: 70px;
 }
@@ -24,7 +24,7 @@ body {
   .blur(@blur);
   z-index: -500;
 
-  background-image: url(photos/snow.gif);
+  background-image: url(snow.gif);
   background-size: cover;
 }
 
