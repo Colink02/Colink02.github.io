@@ -1,4 +1,3 @@
-@blur: 10px;
 
 body {
   background-image: url(snow.gif);
@@ -6,22 +5,22 @@ body {
   padding-top: 70px;
 }
 
-.blur(@blur){
-  -webkit-filter: blur(@blur);
-  -moz-filter: blur(@blur);
-  -o-filter: blur(@blur);
-  -ms-filter: blur(@blur);
+.blur(){
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
 }
 
 .blurry .blurrer {   
-  height: 50px + @blur;
-  top: -@blur;
-  left: -@blur;
-  right: -@blur;
+  height: 50px + 10px;
+  top: -10px;
+  left: -10px;
+  right: -10px;
   position: absolute;
   overflow: hidden;
 
-  .blur(@blur);
+  .blur();
   z-index: -500;
 
   background-image: url(snow.gif);
