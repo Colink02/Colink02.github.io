@@ -2,18 +2,41 @@
 <meta charset="UTF-8">
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
     <link rel="stylesheet" href="photos/nav.css">
     <link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-      <link rel="icon" type="image/png"
-     href="photos/My%20Logo(Watermark_version).png" />
+    <link rel="icon" type="image/png"
+          href="photos/My%20Logo(Watermark_version).png" />
   </head> 
     <title>Home</title>
-  <body>
+  <script>
+    function begin() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+      var t = setTimeout(begin, 5);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    } 
+    $(document).ready(function(){
+      $("#logo").hide().fadeIn(3000);
+      $("#logo").animate({width: "100px", height: "100px"}, 1000);
+    })
+  </script> 
+  <body onload="begin()">
     <div class='background'>
 <div id='header'>
-<div class="topbar blur">
-  <nav class="navbar navbar-default navbar-fixed-top blurry">
+  <div class="topbar">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="blurrer"></div>
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -36,6 +59,7 @@
           <li><a href="https://discord.gg/ePEVbwv">Discord</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <div id="txt"></div>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -53,11 +77,9 @@
         data-link-color="fff"
         ></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
-    <section class="content_title">
-      <article>
-        <p><b><font size="5" color="green"></font></b></p>
-      </article>
-    </section>
+  <div class="center">
+    <img id="logo" src="photos/My%20Logo(Watermark_version).png" alt="Colink02 Dev Logo" />
+    </div>
     </div>
       <p></p>
   </div>
