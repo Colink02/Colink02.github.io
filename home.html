@@ -2,73 +2,35 @@
 <meta charset="UTF-8">
 <html>
   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="photos/nav.css">
+    <link rel="stylesheet" href="nav.css">
     <link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link rel="icon" type="image/png"
           href="photos/My%20Logo(Watermark_version).png" />
   </head> 
     <title>Colink Home</title>
   <script>
-    function begin() {
-      var today = new Date();
-      var h = today.getHours();
-      var m = today.getMinutes();
-      var s = today.getSeconds();
-      m = checkTime(m);
-      s = checkTime(s);
-      document.getElementById('txt').innerHTML =
-        h + ":" + m + ":" + s;
-      var t = setTimeout(begin, 5);
-    }
-    function checkTime(i) {
-      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-      return i;
-    } 
     $(document).ready(function(){
       $("#logo").hide().fadeIn(3000);
       $("#logo").animate({width: "100px", height: "100px"}, 1000);
     })
   </script> 
-  <body onload="begin()">
+  <body>
     <div class='background'>
 <div id='header'>
-  <div class="topbar">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="blurrer"></div>
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Colink02 Dev</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="https://github.com/Colink02/Colink02.github.io">Github</a></li>
-          <li><a href="https://discord.gg/ePEVbwv">Discord</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <div id="txt"></div>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-</div>
-    <div class="space" </div>  
+    <div class="space" />
 <div class="center">
-    <img id="logo" class="right" src="photos/My%20Logo(Watermark_version).png" alt="Colink02 Dev Logo" /></div>
-    <img src='face.php?u=Colink02&s=16' />
+    <div id="applet" />
+    <div id="navigation" >
+      <a class="navigation_link">Home</a>
+      <a class="navigation_link">Discord</a>
+      <a class="navigation_link">GitHub</a> 
+
+    </div>
+    <!--<img id="logo" class="right" src="photos/My%20Logo(Watermark_version).png" alt="Colink02 Dev Logo" /></div> !-->
     <div class="right">
         <a class="twitter-timeline" 
         data-height="694"

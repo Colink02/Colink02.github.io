@@ -19,7 +19,6 @@
     overflow: hidden
 }
   .background {
-    <!--filter: blur(3px);-->
     background-image: url("photos/My%20Logo.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -29,11 +28,12 @@
     min-width: 100%;
     min-height: 100%
 }
+</style>
   <body>
     <div class='background'>
 <div id='header'>
 <div class="topbar">
-<canvas class="topbar" id="myCanvas" style="none;">This is not supported</canvas>
+<canvas class="topbar" id="myCanvas">This is not supported</canvas>
 <script>
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
