@@ -1,12 +1,16 @@
 #post {
-    border-color: lightgray;
+    border-color: white;
     border-radius: 5px;
     border-style: double;
     position: absolute;
     background-color: rgba(255,255,255,0.67);
     top: 130px;
 }
-#post div{
+#social_links{
+    border-color: white;
+    border-radius: 5px;
+    border-style: double;
+    float: right;
 }
 body {
     margin: 25px 150px 0px 130px;
