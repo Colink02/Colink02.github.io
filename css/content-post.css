@@ -1,0 +1,19 @@
+#post {
+    border-color: lightgray;
+    border-radius: 5px;
+    border-style: double;
+}
+body {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar-default {
+    background-color: rgba(255, 255, 255, 0.77);
+    border-color: rgba(255, 255, 255, 0.77)
+}
+#brand_img {
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 50px;
+}

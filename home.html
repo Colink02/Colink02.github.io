@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
-  <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="css/nav.css" />
+	<link rel="stylesheet" href="css/content-post.css" />
+	<script src="js/home.js"></script>
+	<link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<link rel="icon" type="image/png" href="photos/My%20Logo.png" />
+	<script>
+		$(document).ready(function(){
+			document.addEventListener('contextmenu', event => event.preventDefault());
+		})</script>
+	<title>Home</title>
+</head>
+<!--EOF Head -->
 
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="nav.css">
-    <link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-    <link rel="icon" type="image/png"
-          href="photos/My%20Logo(Watermark_version).png" />
-  </head> 
-    <title>Colink Home</title>
-  <script>
-    $(document).ready(function(){
-      $("#logo").hide().fadeIn(3000);
-      $("#logo").animate({width: "100px", height: "100px"}, 1000);
-    })
-  </script> 
-  <body>
-    <div class='background'>
-<div id='header'>
-    <div class="space" />
-<div class="center">
-    <div id="applet" />
-    <div id="navigation" >
-      <a class="navigation_link">Home</a>
-      <a class="navigation_link">Discord</a>
-      <a class="navigation_link">GitHub</a> 
-
-    </div>
-    <!--<img id="logo" class="right" src="photos/My%20Logo(Watermark_version).png" alt="Colink02 Dev Logo" /></div> !-->
-    <div class="right">
-        <a class="twitter-timeline" 
-        data-height="694"
-        data-width="300"  
-        data-theme="dark" 
-        data-chrome="nofooter"
-        href="https://twitter.com/Colink02"
-        data-border-color="#42a1f4"
-        data-link-color="fff"
-        ></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-    </div>
-      <p></p>
-  </div>
-  </body>
+<body>
+	<div class='background'>
+		<div id='header'>
+			<div class="topbar">
+				<nav class="navbar navbar-default navbar-fixed-top">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-left" href="home"><img class="image-cropper" src="photos/My%20Logo.png" id="brand_img" /></a>
+							<a class="navbar-brand" href="home">Colink02 Dev</a>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a></li>
+								<li><a href="/blog"><i class="fas fa-rss"></i> Blog</a></li>
+								<li><a href="https://github.com/Colink02/Colink02.github.io"><i class="fab fa-github"></i> Github</a></li>
+								<li><a href="https://discord.gg/ePEVbwv"><i class="fab fa-discord"></i> Discord</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="mailto:colinkinzel@gmail.com"><i class="fas fa-envelope"></i> Contact Me</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</div>
+			<div class="space"></div>
+			<div class="center">
+				<div class="container" id="post">
+					<section>
+						<p>This is a test.</p>
+					</section>
+				</div>
+			</div>
+			<div class="right">
+				<a class="twitter-button" data-height="694" data-width="300" data-theme="dark" data-chrome="nofooter" href="https://twitter.com/Colink02" data-border-color="#42a1f4" data-link-color="fff"></a>
+			</div>
+		</div>
+		<p></p>
+	</div>
+	<footer style="bottom:0; width:100%; position:fixed;">
+		<a href="https://twitter.com/Colink02?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Colink02</a>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</footer>
+</body>
 </html>
