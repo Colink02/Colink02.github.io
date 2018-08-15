@@ -3,10 +3,11 @@
     border-radius: 5px;
     border-style: double;
     overflow: auto;
-    position: static;
+    position: relative;
 }
 body {
     margin: 25px 25px 0px 25px;
+    position: relative;
 }
 .navbar-default {
     background-color: rgba(255, 255, 255, 0.77);
