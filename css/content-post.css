@@ -2,6 +2,8 @@
     border-color: lightgray;
     border-radius: 5px;
     border-style: double;
+    overflow: auto;
+    
 }
 body {
     padding-left: 25px;
