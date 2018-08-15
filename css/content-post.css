@@ -3,7 +3,7 @@
     border-radius: 5px;
     border-style: double;
     overflow: auto;
-    
+    position: static;
 }
 body {
     padding-left: 25px;
