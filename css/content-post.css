@@ -6,9 +6,7 @@
     position: static;
 }
 body {
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin: 25px 25px 0px 25px;
 }
 .navbar-default {
     background-color: rgba(255, 255, 255, 0.77);
