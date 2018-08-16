@@ -26,3 +26,10 @@ body {
     max-height: 72px;
     max-width: 50px;
 }
+.post_content {
+    
+}
+.post_header {
+    color: black;
+    font-weight: bold;
+}
