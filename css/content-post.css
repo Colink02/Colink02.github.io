@@ -9,6 +9,8 @@
 #social_links{
     border-color: white;
     border-radius: 5px;
+    position: absolute;
+    right: 0;
     border-style: double;
     float: right;
 }
