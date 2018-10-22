@@ -16,12 +16,12 @@
     margin-right: 0px;
 }
 body {
-    margin: 25px 150px 0px 130px;
+    margin: 25px 0px 0px 130px;
     position: relative;
 }
 .navbar-default {
     background-color: rgba(255, 255, 255, 0.77);
-    border-color: rgba(255, 255, 255, 0.77)
+    border-color: rgba(255, 255, 255, 0.77);
 }
 #brand_img {
     height: auto;
