@@ -13,6 +13,7 @@
     right: 0;
     border-style: double;
     float: right;
+    margin-right: 0px;
 }
 body {
     margin: 25px 150px 0px 130px;
