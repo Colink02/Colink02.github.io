@@ -30,7 +30,7 @@ body {
     max-width: 50px;
 }
 .post_content {
-    
+    margin: 0px 20px 0px 20px;
 }
 .post_header {
     color: black;
