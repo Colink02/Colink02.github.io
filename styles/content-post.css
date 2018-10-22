@@ -1,19 +1,12 @@
 #post {
     border-color: white;
+    margin: 0px 20px 0px 20px;
     border-radius: 5px;
     border-style: double;
     display: inline;
+    clear: both;
     background-color: rgba(255,255,255,0.67);
     top: 130px;
-}
-#social_links{
-    border-color: white;
-    border-radius: 5px;
-    position: absolute;
-    right: 0;
-    border-style: double;
-    float: right;
-    margin-right: 0px;
 }
 body {
     margin: 25px 0px 0px 130px;
@@ -30,7 +23,6 @@ body {
     max-width: 50px;
 }
 .post_content {
-    margin: 0px 20px 0px 20px;
 }
 .post_header {
     color: black;
