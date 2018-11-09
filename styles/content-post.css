@@ -1,24 +1,34 @@
 #post {
-    border-color: lightgray;
+    border-color: white;
+    margin: 0px 20px 0px 20px;
     border-radius: 5px;
     border-style: double;
-    position: absolute;
+    display: inline;
     background-color: rgba(255,255,255,0.67);
     top: 130px;
 }
-#post div{
-}
 body {
-    margin: 25px 150px 0px 150px;
+    margin: 25px 0px 0px 130px;
     position: relative;
 }
 .navbar-default {
     background-color: rgba(255, 255, 255, 0.77);
-    border-color: rgba(255, 255, 255, 0.77)
+    border-color: rgba(255, 255, 255, 0.77);
 }
 #brand_img {
     height: auto;
     width: auto;
     max-height: 72px;
     max-width: 50px;
+}
+.post_content {
+}
+.post_header {
+    color: black;
+    font-weight: bold;
+}
+.title {
+    background-color: white;
+    font-weight: bold;
+    display: block;
 }

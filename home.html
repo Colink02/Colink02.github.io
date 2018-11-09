@@ -5,15 +5,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
-	<link rel="stylesheet" href="css/nav.css" />
-	<link rel="stylesheet" href="css/content-post.css" />
-	<script src="js/home.js"></script>
+	<link rel="stylesheet" href="styles/nav.css" />
+	<link rel="stylesheet" href="styles/home.css" />
+	<link rel="stylesheet" href="styles/content-post.css" />
+	<script src="scripts/home.js"></script>
 	<link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 	<link rel="icon" type="image/png" href="photos/My%20Logo.png" />
-	<script>
-		$(document).ready(function(){
-			document.addEventListener('contextmenu', event => event.preventDefault());
-		})</script>
 	<title>Home</title>
 </head>
 <!--EOF Head -->
@@ -44,32 +41,35 @@
 								<li><a href="https://discord.gg/ePEVbwv"><i class="fab fa-discord"></i> Discord</a></li>
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
+								<li><a href="https://www.twitter.com/Colink02"><i class="fab fa-twitter"></i> Twitter</a><li>
 								<li><a href="mailto:colinkinzel@gmail.com"><i class="fas fa-envelope"></i> Contact Me</a></li>
 							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
 				</nav>
 			</div>
+			<div id='title'>
+				<h1>Colink02 Dev</h1>
+				<h2>note: this site is still in progress.</h2>
+			</div>
 			<div class="space"></div>
 			<div class="center">
-				<div class="container" id="post">
+				<div class="container-fluid" id="post">
 					<section>
-						<h1>Welcome To Colink02 Dev Website</h1>
-						<p>This is where i plan to post stuff and other things.</p>
-						<p><b>Note: This website is still in development.</b></p>
+						<h1>Welcome!</h1>
+						<p class="post_content">This is where i plan to post stuff such as updates on my current projects.</p>
+						<p class="post_content">the current projects are:</h2>
+						<ul>
+							<li>Endless Minigames Bukkit Plugin</li>
+							<li>Embed Bot[Currently in Pre Beta Finalization]</li>
+							<li>More Projects (Hopefully) Soon!</li>
+						</ul>
 					</section>
 				</div>
 			</div>
-			<div class="right">
-				<a class="twitter-button" data-height="694" data-width="300" data-theme="dark" data-chrome="nofooter" href="https://twitter.com/Colink02" data-border-color="#42a1f4" data-link-color="fff"></a>
-			</div>
 		</div>
-		<p></p>
 	</div>
 	<footer style="bottom:0; width:100%; position:fixed;">
-		<a href="https://twitter.com/Colink02?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Colink02</a>
-		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</footer>
 </body>
 </html>
