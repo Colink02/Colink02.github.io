@@ -1,9 +1,8 @@
 #post {
     border-color: white;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 150px 0px 150px;
     border-radius: 5px;
     border-style: double;
-    display: inline;
     background-color: rgba(255,255,255,0.67);
     top: 130px;
 }
