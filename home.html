@@ -5,7 +5,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/navbar-custom-theme.css" />
 	<link rel="stylesheet" href="styles/home.css" />
 	<link rel="stylesheet" href="styles/content-post.css" />
 	<script src="scripts/home.js"></script>
@@ -30,19 +32,26 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-left" href="home"><img class="image-cropper" src="photos/My%20Logo.png" id="brand_img" /></a>
-							<a class="navbar-brand" href="home">Colink02 Dev</a>
+							<a class="navbar-left" href="home"><img src="photos/My%20Logo.png" id="brand_img" /></a>
+							<a class="navbar-brand" href="home"> Colink02 Dev</a>
 						</div>
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
 								<li class="active"><a href="#"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a></li>
 								<li><a href="/blog"><i class="fas fa-rss"></i> Blog</a></li>
-								<li><a href="https://github.com/Colink02/Colink02.github.io"><i class="fab fa-github"></i> Github</a></li>
-								<li><a href="https://discord.gg/ePEVbwv"><i class="fab fa-discord"></i> Discord</a></li>
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
-								<li><a href="https://www.twitter.com/Colink02"><i class="fab fa-twitter"></i> Twitter</a><li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">External Links<span class="caret"></span></a>
+                                     <ul class="dropdown-menu">
+                                        <li><a href="https://discord.gg/ePEVbwv"><i class="fab fa-discord"></i> My Discord Server</a></li>
+                                        <li><a href="https://github.com/Colink02"><i class="fab fa-github"></i> Github</a></li>
+                                        <li><a href="https://www.twitter.com/Colink02"><i class="fab fa-twitter"></i> Twitter</a></li>
+                                        <li role="separator" class="divider"></li>
+                                         <li><a>Links to all my stuff.</a></li>
+                                    </ul>
+                                </li>
 								<li><a href="mailto:colinkinzel@gmail.com"><i class="fas fa-envelope"></i> Contact Me</a></li>
 							</ul>
 						</div><!-- /.navbar-collapse -->
