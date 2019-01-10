@@ -1,6 +1,6 @@
 #post {
     margin: 0px 0px 0px 0px;
-    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.65);
     top: 130px;
     height: 275px;
     box-shadow: 15px 15px rgba(0,0,0,0.65);
