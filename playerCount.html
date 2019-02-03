@@ -60,6 +60,7 @@
                         var today = new Date();
                         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
                         chart.data.labels.push(time);
+                        chart.data.datasets[0].data = datalist;
                         chart.options.scales = {
                                 yAxes: [{
                                     ticks: {
