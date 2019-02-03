@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+        <script src="/scripts/corsrequest.js"></script>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                border: 0;
+                overflow: hidden; /*  Disable scrollbars */
+                display: block;  /* No floating content on sides */
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="myChart" width="100%" height="100%"></canvas>
+        <script>
+            var datalist = [];
+            var ctx = document.getElementById("myChart").getContext('2d');
+            ctx.canvas.width  = window.innerWidth;
+            ctx.canvas.height = window.innerHeight;
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Players Online',
+                        data: datalist,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                min: 0,
+                                max: 10
+                            }
+                        }]
+                    }
+                }
+            });
+            setInterval(() => {
+                chart.data.datasets.forEach((dataset) => {
+                    makeCorsRequest("https://mcapi.xdefcon.com/server/play.hypixel.net/players/json",(data) => {
+                        datalist.push(data);
+                        var today = new Date();
+                        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                        chart.data.labels.push(time);
+                        chart.options.scales = {
+                                yAxes: [{
+                                    ticks: {
+                                        min: Math.min.apply(this, datalist) - 50,
+                                        max: Math.max.apply(this, datalist) + 50
+                                    }
+                                }]
+                        }
+                    });
+                    console.log(dataset.data);
+                });
+                chart.update();
+            }, 500);
+        </script>
+
+    </body>
+</html>
