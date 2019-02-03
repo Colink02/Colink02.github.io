@@ -50,7 +50,7 @@
             });
             setInterval(() => {
                 chart.data.datasets.forEach((dataset) => {
-                    makeCorsRequest("https://mcapi.xdefcon.com/server/play.hypixel.net/players/json",(data) => {
+                    makeCorsRequest("https://cors.io/?https://mcapi.xdefcon.com/server/play.hypixel.net/players/json",(data) => {
                         datalist.push(data);
                         var today = new Date();
                         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
