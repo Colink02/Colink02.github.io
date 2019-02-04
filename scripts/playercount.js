@@ -40,7 +40,7 @@ function beginGET() {
         chart.data.datasets.forEach((dataset) => { //Needs to be changed to allow for lots of datasets
             makeCorsRequest("https://cors.io/?https://mcapi.xdefcon.com/server/"+ server[dataset] +"/players/json",(data) => {
                 dataset.data.push(data);
-                alert(Object.getOwnPropertyNames(dataset).join("\n"));
+                alert("data: " + Object.getOwnPropertyNames(dataset).join("\n"));
                 var today = new Date();
                 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
                 chart.data.labels.push(time);
