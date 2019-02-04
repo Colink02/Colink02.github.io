@@ -4,8 +4,6 @@ var datalist = [];
 
 function buildChart() {
     var ctx = document.getElementById("myChart").getContext('2d');
-    ctx.canvas.width  = window.innerWidth - 50;
-    ctx.canvas.height = window.innerHeight - 50;
     chart = new Chart(ctx, {
         type: 'line',
         data: {
