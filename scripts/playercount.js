@@ -23,7 +23,8 @@ function buildChart() {
             }]
         },
         options: {
-            responsive: false,
+            responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 yAxes: [{
                     ticks: {
