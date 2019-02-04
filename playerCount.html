@@ -26,7 +26,7 @@
                 <a class="dropdown-item" onclick="addPage()">Add Another Server</a>
             </div>
           </div>
-        <canvas id="myChart" width="95%" height="85%"></canvas>
+        <canvas id="myChart" width="85%" height="85%"></canvas>
 
         <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -38,19 +38,15 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form>
-                    <div class="form-group">
-                        <label for="serverSelection" class="col-form-label">Select Server Dataset: </label>
-                        <select id="serverSelection">
-                            <option></option>
-                            <option></option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="message-text" class="col-form-label">Message:</label>
-                      <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                  </form>
+                <div class="form-group">
+                    <label for="serverSelection" class="col-form-label">Select Server Dataset: </label>
+                    <select id="serverSelection"></select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="1" cols="50" id="serverIPtext"></textarea>
+                    <button type="button" onclick="updateDataset()">Save</button>
+                    <button type="button" onclick="deleteDataset()">Delete</button>
+                </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
