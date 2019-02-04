@@ -1,16 +1,17 @@
 var chart = "";
 var server = [];
 var datalist = [];
+var datasetsInt = 0;
 
-//var old = console.log;
-//var logger = document.getElementById('log');
-//console.log = function (message) {
-//    if (typeof message == 'object') {
-//        logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
-//    } else {
-//        logger.innerHTML += message + '<br />';
-//    }
-//}
+var old = console.log;
+var logger = document.getElementById('log');
+console.log = function (message) {
+    if (typeof message == 'object') {
+        logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+    } else {
+        logger.innerHTML += message + '<br />';
+    }
+}
 
 function buildChart() {
     var ctx = document.getElementById("myChart").getContext('2d');
@@ -27,7 +28,8 @@ function buildChart() {
                 borderColor: [
                     'rgba(255,99,132,1)'
                 ],
-                borderWidth: 1
+                borderWidth: 1,
+                title: "dataset1"
             }]
         },
         options: {
@@ -48,7 +50,7 @@ function buildChart() {
 function beginGET() {
     var interval = setInterval(() => {
         chart.data.datasets.forEach((dataset) => { //Needs to be changed to allow for lots of datasets
-            makeCorsRequest("https://cors.io/?https://mcapi.xdefcon.com/server/"+ server[dataset] +"/players/json",(data) => {
+            makeCorsRequest("https://cors.io/?https://mcapi.xdefcon.com/server/"+ server[dataset.title] +"/players/json",(data) => {
                 dataset.data.push(data);
                 console.log(dataset);
                 var today = new Date();
@@ -71,7 +73,8 @@ function beginGET() {
 
 function setServer() {
     var form = document.getElementById("ip");
-    server[] = form.value;
+    server["dataset"+datasetsInt] = form.value;
+    datasetsInt++;
     datalist = [];
     chart.data.labels = []
     chart.update();
