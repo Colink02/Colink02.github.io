@@ -50,7 +50,7 @@ function buildChart() {
 function beginGET() {
     var interval = setInterval(() => {
         chart.data.datasets.forEach((dataset) => { //Needs to be changed to allow for lots of datasets
-            makeCorsRequest("https://cors.io/?https://mcapi.xdefcon.com/server/"+ server[dataset.title] +"/players/json",(data) => {
+            makeCorsRequest("https://cors.io/?https://mcapi.xdefcon.com/server/"+ server +"/players/json",(data) => {
                 dataset.data.push(data);
                 console.log(dataset);
                 var today = new Date();
