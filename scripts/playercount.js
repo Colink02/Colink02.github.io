@@ -3,6 +3,8 @@ var server = [];
 var datalist = [];
 var datasetsInt = 0;
 
+console.log = function(message) {alert(message);};
+
 
 function buildChart() {
     var ctx = document.getElementById("myChart").getContext('2d');
