@@ -58,7 +58,7 @@ function beginGET() {
             });
         });
         chart.update();
-    }, 60000);
+    }, 500);
 }
 
 function setServer() {
