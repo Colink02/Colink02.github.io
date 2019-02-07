@@ -14,10 +14,15 @@
 	<link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 	<link rel="icon" type="image/png" href="photos/My%20Logo.png" />
 	<title>Home</title>
+	<script>
+	$(function onPageLoad() {
+    	$("#post").animate({left: '1000px'}, 1000);
+	});
+	</script>
 </head>
 <!--EOF Head -->
 
-<body onload="onPageLoad()">
+<body>
 	<div class='background'>
 		<span>
 		  <div id='header'>
@@ -62,7 +67,7 @@
 		</span>
 			<div class="space"></div>
 			<div>
-				<div class="container-fluid" id="post">
+				<div class="container" id="post">
 					<section>
 						<h1>Welcome!</h1>
 						<p class="post_content">This is where I plan to post stuff such as updates on my current projects.<br /> The current projects are:</h2>

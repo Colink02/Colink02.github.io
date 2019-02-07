@@ -1,4 +1,4 @@
-$(".dot").slideDown(10000000)
+$(".dot").slideDown(10)
 while(true) {    
   var element = document.getElementById('foo');
   var positionInfo = element.getBoundingClientRect();
