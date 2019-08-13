@@ -12,9 +12,9 @@ let launchpadMK2 = [
     11, 12, 13, 14, 15, 16, 17, 18,
 ];
 
-console.log = function(data) {
-    document.getElementbyId("console").innerHTML += data;   
-}
+console.log = function(message) {
+    document.getElementbyId("console").innerHTML += message;   
+};
 
 function onMIDIMessage(event) {
     let data = event.data,
@@ -123,6 +123,7 @@ function hexToRgb(hex) {
         b: parseInt(result[3], 16)
     } : null;
 }
+console.log("Ready");
 navigator.requestMIDIAccess({
     sysex: true
 }).then(onMIDISuccess, onMIDIFailure);
