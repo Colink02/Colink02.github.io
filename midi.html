@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script src="./mid.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <button onclick="clearLEDS()">Clear</button>
+        <button onclick="runThrough()">Test</button>
+        <button onclick="spin()">Spin Boi</button>
+    </div>
+    <div><label for="data">Input Code from Novation's Documentation</label>
+        <input type="text" id="data">
+    </div>
+    <input type="button" id="dataCollect" onclick="sendHexData()" value="Send">
+    <div>
+        <input type="color" id="colorData">
+        <input type="button" value="Set Color" onclick="setColor()">
+    </div>
+</body>
+
+</html>
