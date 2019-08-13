@@ -12,6 +12,10 @@ let launchpadMK2 = [
     11, 12, 13, 14, 15, 16, 17, 18,
 ];
 
+console.log = function(data) {
+    document.getElementbyId("console").innerHTML += data;   
+}
+
 function onMIDIMessage(event) {
     let data = event.data,
         cmd = data[0] >> 4,
@@ -19,7 +23,7 @@ function onMIDIMessage(event) {
         type = data[0] & 0xf0,
         note = data[1],
         velocity = data[2];
-    //console.log(parseInt(note.toString(16), 16));
+    consoleLog(parseInt(note.toString(16), 16));
     sendNoteTo(output, note, 127, 0x66);
 }
 
@@ -28,6 +32,7 @@ function onMIDISuccess(midiAccess) {
     output = midiAccess.outputs.values().next().value;
     // listen for connect/disconnect message
     midi.onstatechange = onStateChange;
+    consolelog("Success");
 
     let inputs = midi.inputs.values();
     for (let input = inputs.next(); input && !input.done; input = inputs.next()) {
@@ -36,11 +41,11 @@ function onMIDISuccess(midiAccess) {
 }
 
 function onMIDIFailure(msg) {
-    console.log('Failed to get MIDI access', msg);
+    consoleLog('Failed to get MIDI access'+ msg);
 }
 
 function onStateChange(event) {
-    console.log(event.port);
+    consoleLog(event.port);
 }
 
 function sendNoteTo(output, note, velocity = 127, textColor = 0x60) {
@@ -72,7 +77,7 @@ function spin() {
 
 function spun(index, lights) {
     output.send([0x90, parseInt(lights[index].toString(16), 16), 0x0D]);
-    console.log("sent");
+    console("sent");
     if (index != 1 && index != 0) {
         output.send([0x80, parseInt(lights[index - 2].toString(16), 16), 0x00]);
     } else if (index == 0) {
