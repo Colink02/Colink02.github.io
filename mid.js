@@ -107,7 +107,7 @@ function sendHexData() {
 function setColor() {
     data = hexToRgb(document.getElementById("colorData").value)
     console.log(data['r']);
-    output.send([0xF0, 0x00, 0x20, 0x29, 0x02, 0x18, 0x0B, 0x14, parseInt(data['r'].toString(16), 16), parseInt(data['g'].toString(16), 16), parseInt(data['b'].toString(16), 16), 0xF7]);
+    output.send([0xF0, 0x00, 0x20, 0x29, 0x02, 0x18, 0x0B, 0x14, data['r'], data['g'], data['b'], 0xF7]);
 }
 
 function hexToRgb(hex) {
