@@ -1,31 +1,25 @@
 #post {
     margin: 0px 0px 0px 0px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     top: 130px;
     height: 275px;
-    box-shadow: 15px 15px rgba(0,0,0,0.65);
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.65);
     opacity: 0.0;
 }
-body {
-    margin: 25px 0px 0px 0px;
-    position: relative;
-}
+
+
 .navbar-default {
-    background-color: #82A6F0;
+    background-color: rgba(213, 217, 224, 0.15);
     border: none;
 }
-#brand_img {
-    height: auto;
-    width: auto;
-    max-height: 50px;
-    max-width: 50px;
-}
-.post_content {
-}
+
+.post_content {}
+
 .post_header {
     color: black;
     font-weight: bold;
 }
+
 .title {
     background-color: white;
     font-weight: bold;

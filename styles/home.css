@@ -1,17 +1,25 @@
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+* {
+  box-sizing: border-box
 }
 
+/*html {
+  animation:spin 6s linear infinite, spinfyre 2s linear infinite;
+}
+ @keyframes spin { 100% { -webkit-transform: translateY(100vh); transform:translateY(100vh); } }
+ @keyframes spinfyre { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }*/
+.mySlides {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -33,8 +41,9 @@ img {vertical-align: middle;}
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -69,8 +78,15 @@ img {vertical-align: middle;}
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
+  height: 100%;
+  border-radius: 6px;
+}
+
+ul li a {
+  color: white !important;
 }
 
 /* Fading animation */
@@ -82,16 +98,89 @@ img {vertical-align: middle;}
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}
+
+body {
+  /*background: #ffd966ff;*/
+  background: url("/photos/code-background.jpg"), rgba(0, 0, 127, 0.2);
+  background-size: auto;
+  background-attachment: fixed;
+  padding-top: 70px;
+  font-family: Verdana,
+    sans-serif;
+}
+
+#logo {
+  padding-bottom: 0;
+}
+
+.carousel-inner img {
+  margin: auto;
+}
+
+.carouselDiv {
+  width: 50%;
+  height: 300px;
+  left: 50%;
+  right: 50%;
+  /*height: 100vh;*/
+  border-radius: 5px;
+}
+
+.fullpage_content {
+  height: 100vh;
+  text-align: center;
+  padding-top: 50px;
+  background: radial-gradient(#dfe9fbff, #dfe9fbff);
+}
+
+.internal_content {
+  display: block;
+  position: relative;
+
+}
+
+.main {
+  height: 100vh;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: block;
+  /*width: auto;*/
+}
+
+.layer {
+  background-color: rgba(0, 0, 127, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
