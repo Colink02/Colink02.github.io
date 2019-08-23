@@ -129,7 +129,7 @@ ul li a {
 
 body {
   /*background: #ffd966ff;*/
-  background: url("/photos/code-background.jpg"), rgba(0, 0, 127, 0.2);
+  background: url("/photos/code-background.webp"), rgba(0, 0, 127, 0.2);
   background-size: auto;
   background-attachment: fixed;
   padding-top: 70px;
