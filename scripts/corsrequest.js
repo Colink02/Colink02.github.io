@@ -21,9 +21,6 @@ function makeCorsRequest(url, callback) {
 
   var xhr = createCORSRequest('GET', url);
   // Response handlers.
-  xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
-  xhr.setRequestHeader('Content-type', 'application/json');
-  xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
   xhr.onload = function() {
     var text = xhr.responseText;
     callback(JSON.parse(text).players);
