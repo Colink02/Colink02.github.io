@@ -18,17 +18,22 @@ function createCORSRequest(method, url) {
 
 // Make the actual CORS request.
 function makeCorsRequest(url, callback) {
-
-  var xhr = createCORSRequest('GET', url);
+  $.ajax({
+    method: 'GET',
+    url: url,
+    dataType: 'json', //change the datatype to 'jsonp' works in most cases
+    success: (res) => {
+      var text = res;
+    }
+  });
+  //var xhr = createCORSRequest('GET', url);
   // Response handlers.
-  xhr.onload = function() {
-    var text = xhr.responseText;
-    callback(JSON.parse(text).players);
-  };
-
-  xhr.onerror = function() {
-  };
-
-  xhr.send();
+  //xhr.onload = function() {
+  //  var text = xhr.responseText;
+  //  callback(JSON.parse(text).players);
+  //};
+  //xhr.onerror = function() {
+  //};
+  //xhr.send();
   return;
 }
