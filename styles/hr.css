@@ -1,0 +1,20 @@
+hr {
+    flex: 0 0 25px;
+    border: none;
+    height: 2px;
+    background: black;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr:first-child {
+    margin-right: 0;
+}
+
+hr:last-child {
+    margin-left: 0;
+}

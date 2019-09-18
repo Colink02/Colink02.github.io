@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 /*html {
@@ -8,11 +8,15 @@
  @keyframes spin { 100% { -webkit-transform: translateY(100vh); transform:translateY(100vh); } }
  @keyframes spinfyre { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }*/
 .mySlides {
-  display: none
+  display: none;
 }
 
 img {
   vertical-align: middle;
+}
+
+.navbar-nav {
+  height: 40px;
 }
 
 /* Slideshow container */
@@ -155,6 +159,8 @@ body {
 }
 
 .fullpage_content {
+  margin: 0 auto;
+  max-width: 100%;
   height: 100vh;
   text-align: center;
   padding-top: 50px;
@@ -179,10 +185,11 @@ body {
 .layer {
   background-color: rgba(0, 0, 127, 0.2);
   position: absolute;
-  top: 0;
+  /*top: 0;*/
+  top: 0vh;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100vh + 70px);
 }
 
 .dropdown-menu {
@@ -193,4 +200,8 @@ body {
 .dropdown-item:hover {
   background-color: blue;
   text-decoration: none;
+}
+
+.center {
+  vertical-align: middle;
 }

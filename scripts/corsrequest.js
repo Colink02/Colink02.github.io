@@ -28,12 +28,15 @@ function makeCorsRequest(url, callback) {
   });
   //var xhr = createCORSRequest('GET', url);
   // Response handlers.
-  //xhr.onload = function() {
-  //  var text = xhr.responseText;
-  //  callback(JSON.parse(text).players);
-  //};
-  //xhr.onerror = function() {
-  //};
-  //xhr.send();
+  xhr.onload = function () {
+    var text = xhr.responseText;
+    callback(JSON.parse(text).players);
+  };
+
+  xhr.onerror = function () {
+    console.log("Error");
+  };
+
+  xhr.send();
   return;
 }

@@ -20,7 +20,7 @@ function buildChart() {
                     'rgba(255,99,132,1)'
                 ],
                 borderWidth: 1,
-                title: "dataset1"
+                title: "Epic Data"
             }]
         },
         options: {
@@ -38,41 +38,43 @@ function buildChart() {
     });
     beginGET();
 }
+
 function beginGET() {
     var interval = setInterval(() => {
         chart.data.datasets.forEach((dataset) => { //Needs to be changed to allow for lots of datasets
-            makeCorsRequest("https://mcapi.xdefcon.com/server/"+ server +"/players/json",(data) => {
+            makeCorsRequest("http://cors-anywhere.herokuapp.com/https://mcapi.xdefcon.com/server/" + server + "/players/json", (data) => {
                 dataset.data.push(data);
                 var today = new Date();
                 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
                 chart.data.labels.push(time);
                 chart.data.datasets[0].data = datalist;
                 chart.options.scales = {
-                        yAxes: [{
-                            ticks: {
-                                min: Math.min.apply(this, datalist) - 50,
-                                max: Math.max.apply(this, datalist) + 50
-                            }
-                        }]
+                    yAxes: [{
+                        ticks: {
+                            min: Math.min.apply(this, datalist) - 50,
+                            max: Math.max.apply(this, datalist) + 50
+                        }
+                    }]
                 }
             });
         });
         chart.update();
-    }, 500);
+    }, 2000);
 }
 
 function setServer() {
     var form = document.getElementById("ip");
-    server["dataset"+datasetsInt] = form.value;
+    server["dataset" + datasetsInt] = form.value;
     datasetsInt++;
     datalist = [];
     chart.data.labels = []
     chart.update();
 }
+
 function ask4ip() {
-    while(true) {
+    while (true) {
         var ip = prompt("Please Enter a Minecraft Server IP.");
-        if(ip) {
+        if (ip) {
             server = ip;
             buildChart();
             break;
@@ -81,6 +83,7 @@ function ask4ip() {
         }
     }
 }
+
 function editPage() {
 
 }
