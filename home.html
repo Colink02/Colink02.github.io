@@ -17,6 +17,7 @@
 	<!--<link rel="stylesheet" href="styles/navbar-custom-theme.css" />-->
 	<link rel="stylesheet" href="styles/home.css" />
 	<link rel="stylesheet" href="styles/content-post.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script src="scripts/home.js"></script>
 	<link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 	<link rel="icon" type="image/png" href="photos/My%20Logo.png" />
@@ -111,14 +112,14 @@
 						</tr>
 					</table>-->
 					<div class="card-deck" style="width: 99%;margin-left: 0.5%;">
-						<div class="card">
+						<div class="card" data-aos-once="true" data-aos="fade-up">
 							<img src="./photos/colink02Webpage.png" class="card-img-top" alt="Logo">
 							<div class="card-body">
 								<h5 class="card-body">Colink02 Dev Website</h5>
 								<p class="card-text">Colin's Website that he builds every now and then just for fun.</p>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card" data-aos-once="true" data-aos="fade-up" data-aos-delay="150">
 							<img src="./photos/My Logo(Black).svg" class="card-img-top" alt="Logo"
 								style="overflow: hidden; height: 191.25px;">
 							<div class="card-body">
@@ -130,7 +131,7 @@
 									class="btn btn-primary">Get It!</a>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card" data-aos-once="true" data-aos="fade-up" data-aos-delay="300">
 							<img src="./photos/My Logo(Black).svg" class="card-img-top" alt="Logo"
 								style="overflow: hidden; height: 191.25px;">
 							<div class="card-body">
@@ -195,6 +196,12 @@
 		</div>
 	</div>
 	<footer style="bottom:0; width:100%; position:fixed;"></footer>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration: 500
+		});
+	</script>
 </body>
 
 </html>
