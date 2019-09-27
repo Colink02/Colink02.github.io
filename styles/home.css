@@ -176,7 +176,7 @@ body {
   height: 100vh;
   text-align: center;
   padding-top: 50px;
-  background: radial-gradient(#dfe9fbff, #dfe9fbff);
+  background: lightskyblue;
 }
 
 .internal_content {
@@ -217,4 +217,46 @@ body {
   text-align: center;
   padding-top: 50px;
   background: transparent;
+}
+
+@keyframes donate_animate {
+  0% {
+    color: lightskyblue;
+  }
+
+  50% {
+    color: lightgreen;
+  }
+
+  100% {
+    color: lightskyblue;
+  }
+}
+
+.donate:hover {
+  animation-name: donate_animate;
+  animation-iteration-count: infinite;
+  animation-duration: 1000ms;
+}
+
+.inactive:hover {
+  color: lightgreen !important;
+}
+
+
+
+.logo {
+  height: 355px;
+  width: 355px;
+  animation: spin 8s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(359deg);
+  }
 }
