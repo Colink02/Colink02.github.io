@@ -6,25 +6,23 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://colink02.me/</loc>
+  <loc>https://colink02dev.com/</loc>
   <lastmod>2019-09-25T06:08:01+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://colink02.me/playerCount</loc>
+  <loc>https://colink02dev.com/playerCount</loc>
   <lastmod>2019-09-25T06:08:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://colink02.me/home</loc>
+  <loc>https://colink02dev.com/home</loc>
   <lastmod>2019-09-25T06:08:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://colink02.me/playerCount.html</loc>
+  <loc>https://colink02dev.com/playerCount.html</loc>
   <lastmod>2019-09-25T06:08:01+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-
-
 </urlset>
