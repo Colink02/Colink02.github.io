@@ -1,0 +1,27 @@
+#post {
+    margin: 0px 0px 0px 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 130px;
+    height: 275px;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.65);
+    opacity: 0.0;
+}
+
+
+.navbar-default {
+    background-color: rgba(213, 217, 224, 0.15);
+    border: none;
+}
+
+
+
+.post_header {
+    color: black;
+    font-weight: bold;
+}
+
+.title {
+    background-color: white;
+    font-weight: bold;
+    display: block;
+}

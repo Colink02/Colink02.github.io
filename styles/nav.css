@@ -1,0 +1,42 @@
+.right {
+  position: absolute;
+  right: 0%;
+}
+
+
+
+#blur {
+  filter: blur(8px);
+  width: auto;
+  height: auto;
+}
+
+
+.center {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  top: 24%;
+  left: 11%;
+  right: 0%;
+  margin: -100px 0 0 -150px;
+}
+
+#lock {
+  list-style-type: none;
+  overflow: visible;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.image-cropper {
+  display: block;
+  -webkit-border-radius: 48%;
+  -moz-border-radius: 48%;
+  -ms-border-radius: 48%;
+  -o-border-radius: 48%;
+  border-radius: 48%;
+}
