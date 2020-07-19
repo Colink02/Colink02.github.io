@@ -1,6 +1,9 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    /*background: linear-gradient(yellow, yellow) no-repeat center/2px 100%;*/
+    /* TODO remove later */
 }
+
 
 /*html {
   animation:spin 6s linear infinite, spinfyre 2s linear infinite;
@@ -9,254 +12,265 @@
  @keyframes spinfyre { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }*/
 
 .mySlides {
-  display: none;
+    display: none;
 }
 
 img {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 .navbar {
-  /*mix-blend-mode: difference;*/
+    /*mix-blend-mode: difference;*/
 }
 
 .layer {
-  background-color: rgba(0, 0, 127, 0.2);
-  position: absolute;
-  /*top: 0;*/
-  top: 0vh;
-  left: 0;
-  width: 100%;
-  height: calc(100vh + 70px);
-  backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 127, 0.2);
+    position: absolute;
+    /*top: 0;*/
+    top: 0vh;
+    left: 0;
+    width: 100%;
+    height: calc(100vh + 70px);
+    backdrop-filter: blur(5px);
 }
+
 
 /* Slideshow container */
 
+
 /* Next & previous buttons */
+
 .prev,
 .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
+
 
 /* Position the "next button" to the right */
+
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
+
 
 /* On hover, add a black background color with a little bit see-through */
+
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
 
 /* Caption text */
+
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+    color: #EBEBEB;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
+
 
 /* Number text (1/3 etc) */
+
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
+
 /* The dots/bullets/indicators */
+
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 .active,
 .dot:hover {
-  background-color: #717171;
-  height: 100%;
-  border-radius: 6px;
+    background-color: #717171;
+    height: 100%;
+    border-radius: 6px;
 }
 
 ul li a {
-  color: white !important;
+    color: white !important;
 }
 
+
 /* Fading animation */
+
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
 
-  .prev,
-  .next,
-  .text {
-    font-size: 11px
-  }
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
 }
 
 body {
-  /*background: #ffd966ff;*/
-  background: url("/photos/code-background.webp"), rgba(0, 0, 127, 0.2);
-  background-size: auto;
-  background-attachment: fixed;
-  padding-top: 70px;
-  font-family: Verdana,
-    sans-serif;
+    /*background: #ffd966ff;*/
+    background: url("/photos/unsplashed-frontpage-bg.jpg"), rgba(0, 0, 127, 0.2);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 70px;
+    font-family: Verdana, sans-serif;
 }
 
 #logo {
-  padding-bottom: 0;
+    padding-bottom: 0;
 }
 
 .carousel-inner img {
-  margin: auto;
+    margin: auto;
 }
 
 .carouselDiv {
-  width: 50%;
-  height: 300px;
-  left: 50%;
-  right: 50%;
-  /*height: 100vh;*/
-  border-radius: 5px;
+    width: 50%;
+    height: 300px;
+    left: 50%;
+    right: 50%;
+    /*height: 100vh;*/
+    border-radius: 5px;
 }
 
 .fullpage_content {
-  margin: 0 auto;
-  max-width: 100%;
-  height: 100vh;
-  text-align: center;
-  padding-top: 50px;
-  background: lightskyblue;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 50px;
+    background: #ffffff;
 }
 
 .internal_content {
-  display: block;
-  position: relative;
-
+    display: block;
+    position: relative;
 }
 
 .main {
-  height: 100vh;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  display: block;
-  /*width: auto;*/
+    height: 100vh;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: block;
+    /*width: auto;*/
 }
 
-
-
 .dropdown-menu {
-  background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(135, 206, 250, 0.5);
 }
 
 .dropdown-item>a:hover,
 .dropdown-item:hover {
-  background-color: blue;
-  text-decoration: none;
+    background-color: blue;
+    text-decoration: none;
 }
 
 .center {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 .fullpage_content_noBG {
-  margin: 0 auto;
-  max-width: 100%;
-  height: 100vh;
-  text-align: center;
-  padding-top: 50px;
-  background: transparent;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 50px;
+    background: transparent;
+    scroll-snap-type: mandatory;
+    scroll-snap-align: start;
 }
 
 @keyframes donate_animate {
-  0% {
-    color: lightskyblue;
-  }
-
-  50% {
-    color: lightgreen;
-  }
-
-  100% {
-    color: lightskyblue;
-  }
+    0% {
+        color: lightskyblue;
+    }
+    50% {
+        color: lightgreen;
+    }
+    100% {
+        color: lightskyblue;
+    }
 }
 
 .donate:hover {
-  animation-name: donate_animate;
-  animation-iteration-count: infinite;
-  animation-duration: 1000ms;
+    animation-name: donate_animate;
+    animation-iteration-count: infinite;
+    animation-duration: 1000ms;
 }
 
 .inactive:hover {
-  color: lightgreen !important;
+    color: lightgreen !important;
 }
 
-
-
 .logo {
-  height: 355px;
-  width: 355px;
-  animation: spin 8s infinite linear;
+    height: 550px;
+    width: 550px;
+    /*animation: spin 8s infinite linear;*/
 }
 
 @keyframes spin {
-  from {
-    transform: rotateY(0deg);
-  }
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(359deg);
+    }
+}
 
-  to {
-    transform: rotateY(359deg);
-  }
+.nav-link {
+    color: rgb(0, 0, 0) !important;
 }
