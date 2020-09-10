@@ -167,6 +167,7 @@ body {
     background-attachment: fixed;
     padding-top: 70px;
     font-family: Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
 #logo {
@@ -192,7 +193,16 @@ body {
     height: 100vh;
     text-align: center;
     padding-top: 50px;
-    background: #ffffff;
+    background-size: cover;
+    background-image: url("/photos/casey-horner-fsJB3KT2rj8-unsplash.jpg");
+    background-image: linear-gradient(to bottom, rgba(67, 161, 173, 0), rgba(67, 161, 173, 1) 90%), url("/photos/casey-horner-fsJB3KT2rj8-unsplash.jpg");
+}
+
+.footer {
+    display: flexbox;
+    width: 100vw;
+    height: 100px;
+    background: rgb(67, 161, 173);
 }
 
 .internal_content {
